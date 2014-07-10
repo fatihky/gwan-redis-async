@@ -81,7 +81,6 @@ int main(int argc, char *argv[])
 
       r_d = *R_D;
 
-      r_d->is_ok = false;
       r_d->reply = reply;
       r_d->lock.val = 1;
 
