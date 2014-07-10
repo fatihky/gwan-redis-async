@@ -134,9 +134,6 @@ int main(int argc, char *argv[])
       
       wake_up(argv, 0, WK_FD, NULL); // 0:disable any further wake-up
 
-      // update current concurrency (GCC builtin atomic operation)
-      __sync_fetch_and_sub(&s_concurrency, 1);
-
       return RC_NOHEADERS; // RC_NOHEADERS: do not generate HTTP headers
    }
 
