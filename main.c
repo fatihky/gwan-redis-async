@@ -31,14 +31,16 @@ void disconnectCallback(const redisAsyncContext *c, int status);
 // ----------------------------------------------------------------------------
 typedef struct 
 { 
-	kv_t *kv;   // a Key-Value store
-	char *blah; // a string
-	int   val;  // a counter
-	struct ev_loop *loop;
-	ev_async async;
-	ev_periodic periodic;
-	redisAsyncContext *c;
+   /*  Custom fields
+   kv_t *kv;   // a Key-Value store
+   char *blah; // a string
+   int   val;  // a counter */
+   struct ev_loop *loop;
+   ev_async async;
+   ev_periodic periodic;
+   redisAsyncContext *c;
 } data_t;
+
 
 // ----------------------------------------------------------------------------
 // init() will initialize your data structures, load your files, etc.
